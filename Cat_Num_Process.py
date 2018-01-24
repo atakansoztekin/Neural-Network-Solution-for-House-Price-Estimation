@@ -15,7 +15,7 @@ import matplotlib
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 
-train = pd.read_csv('/home/atakansoztekin/Desktop/MIS/MIS 463/Project/HousePrice/input/train.csv')
+train = pd.read_csv('Neural-Network-Solution-for-House-Price-Estimation/data/train.csv')
 train.drop('Id',axis = 1, inplace = True)
 train_numerical = train.select_dtypes(exclude=['object'])
 train_numerical.fillna(0,inplace = True)
@@ -23,7 +23,7 @@ train_categoric = train.select_dtypes(include=['object'])
 train_categoric.fillna('NONE',inplace = True)
 train = train_numerical.merge(train_categoric, left_index = True, right_index = True)
 
-test = pd.read_csv('/home/atakansoztekin/Desktop/MIS/MIS 463/Project/HousePrice/input/test.csv')
+test = pd.read_csv('Neural-Network-Solution-for-House-Price-Estimation/data/test.csv')
 ID = test.Id
 test.drop('Id',axis = 1, inplace = True)
 test_numerical = test.select_dtypes(exclude=['object'])
