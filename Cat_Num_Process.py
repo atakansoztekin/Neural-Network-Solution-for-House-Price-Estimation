@@ -147,4 +147,4 @@ def to_submit(pred_y,name_out):
     y_predict.to_csv(name_out + '.csv',index=False)
 
 y_predict = regressor.predict(input_fn=lambda: input_fn_new(testing_sub, training = False))
-to_submit(y_predict, "submission_shallow")
+to_submit(y_predict, "Prediction_of_houses")
